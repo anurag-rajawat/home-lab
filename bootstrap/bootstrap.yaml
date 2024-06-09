@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: clusters
+    path: cluster
     repoURL: https://github.com/anurag-rajawat/home-lab
     targetRevision: main
   syncPolicy:

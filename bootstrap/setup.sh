@@ -59,6 +59,7 @@ installK0s() {
 
 installArgo() {
   kubectl apply -k "$(dirname $0)"/argocd/
+  sleep 120
   kubectl apply -f "$(dirname $0)"/bootstrap.yaml
 }
 
