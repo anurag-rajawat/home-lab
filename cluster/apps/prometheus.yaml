@@ -17,12 +17,17 @@ spec:
     helm:
       releaseName: prometheus
       valuesObject:
+        server:
+          persistentVolume:
+            storageClass: openebs-hostpath
+          ingress:
+            enabled: true
+            ingressClassName: nginx
+            hosts:
+              - "prometheus.rajawatshome.com"
         alertmanager:
           persistentVolume:
             enabled: false
-          server:
-            persistentVolume:
-              enabled: true
   destination:
     server: "https://kubernetes.default.svc"
     namespace: prometheus

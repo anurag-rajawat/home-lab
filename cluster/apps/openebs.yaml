@@ -20,7 +20,7 @@ spec:
         localprovisioner:
           hostpathClass:
             enabled: true
-            isDefaultClass: false
+            isDefaultClass: true
   destination:
     server: "https://kubernetes.default.svc"
     namespace: openebs
